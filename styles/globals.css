@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.pagination ul {
+  list-style: none;
+  font-size: clamp(1.5vw, 2rem, 1.4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: semi-bold;
+}
+
+@media only screen and (max-width: 340px) {
+  ul li {
+    cursor: pointer;
+    padding: min(4.9rem, 4.9vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+}
+@media only screen and (min-width: 340px) {
+  ul li {
+    cursor: pointer;
+    padding: min(4.9rem, 4.9vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+/* Extra small devices (phones, 450px and down) */
+@media only screen and (min-width: 450px) {
+  ul li {
+    cursor: pointer;
+    padding: min(4.4rem, 4.4vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 450px) {
+  ul li {
+    font-size: 18px;
+    cursor: pointer;
+    padding: min(3.5rem, 3.5vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+  ul li:last-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 5.7vw;
+    height: 5.7vw;
+  }
+  ul li:first-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 5.7vw;
+    height: 5.7vw;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  ul li {
+    font-size: 19px;
+    cursor: pointer;
+    padding: min(2.7rem, 2.7vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+  ul li:last-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 5.7vw;
+    height: 5.7vw;
+  }
+  ul li:first-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 5.7vw;
+    height: 5.7vw;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  ul li {
+    font-size: 21px;
+    cursor: pointer;
+    padding: min(2.1rem, 2.1vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+  ul li:last-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 4.7vw;
+    height: 4.7vw;
+  }
+  ul li:first-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 4.7vw;
+    height: 4.7vw;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  ul li {
+    font-size: 21px;
+    cursor: pointer;
+    padding: min(1.8rem, 1.8vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+  ul li:last-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 4vw;
+    height: 4vw;
+  }
+  ul li:first-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 4vw;
+    height: 4vw;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  ul li {
+    cursor: pointer;
+    padding: min(1.6rem, 1.6vw);
+    text-align: center;
+    user-select: none;
+    transition: width 0.3s ease-in-out;
+  }
+  ul li:last-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 4vw;
+    height: 4vw;
+  }
+  ul li:first-child {
+    padding: min(0.5rem, 0.5vw);
+    width: 4vw;
+    height: 4vw;
+  }
+}
+li {
+  border-radius: 50%;
+  padding: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw;
+  height: 3vw;
+  /* transition:width 1s ease-in-out; */
+  /* transform: all 0.3s; */
+  animation: fade 0.3s forwards;
+  -webkit-animation: fade 0.3s forwards;
+}
+
+li:hover {
+  background-color: ghostwhite;
+}
+
+.dots:hover {
+  background: transparent;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateX(2vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(1vw);
+  }
+}
+
+@keyframes fade {
+  from {
+    /* opacity: 0; */
+    transform: translateX(2vw);
+  }
+  to {
+    /* opacity: 1; */
+    transform: translateX(1vw);
+  }
+}
+
+ul .active {
+  border-radius: 50px;
+  background-color: #ffa200;
+  color: white;
+}
+
+.back,
+.forward {
+  display: flex;
+  border: solid transparent 1px;
+  border-radius: 50px;
+}
+
+.back:hover,
+.forward:hover {
+  border-radius: 50px;
+  border: solid transparent;
+}
